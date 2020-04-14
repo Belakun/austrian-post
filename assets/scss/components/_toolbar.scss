@@ -1,0 +1,37 @@
+@import "../colors";
+
+.top-navigation__toolbar {
+  margin-right: 15px;
+  // > .row > .col {
+  //   padding-right: 10px;
+  //   padding-left: 10px;
+  // }
+
+  // > .row > .col-auto {
+  //   padding-right: 10px;
+  //   padding-left: 10px;
+  // }
+}
+
+
+.language-picker__flag {
+  margin-right: 10px;
+}
+
+.language-picker__lang {
+  color: $main-grey;
+}
+
+.user-profile__avatar {
+  margin-right: 10px;
+}
+
+.user-profile__name {
+  color: $main-grey;
+  font-weight: 500;
+}
+
+.user-profile__position {
+  color: $main-grey;
+  font-size: 12px;
+}

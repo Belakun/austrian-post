@@ -1,0 +1,10 @@
+@import "mixins";
+
+html, body {
+  height: 100%;
+}
+
+.menu {
+  @include fixed-width-column(280px);
+}
+

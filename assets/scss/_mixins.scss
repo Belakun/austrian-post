@@ -1,0 +1,7 @@
+// Mixins
+@mixin fixed-width-column($width) {
+  flex: 0 0 $width;
+  width: $width;
+  max-width: $width;
+  min-width: $width;
+}

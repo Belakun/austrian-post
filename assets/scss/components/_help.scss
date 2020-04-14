@@ -1,0 +1,40 @@
+@import "../colors";
+
+.help {
+  height: 100px;
+  background-color: $main-yellow;
+
+  & .help__icon {
+    padding-left: 25px;
+    padding-top: 14px;
+  }
+}
+
+.help__phone, .help__email, .help_faq {
+  height: 14px;
+
+  & span {
+    font-size: 10px;
+    color: $main-grey;
+  }
+}
+
+.help_faq {
+  margin-top: 4px;
+
+  & a, a:hover, a:visited, a:active {
+    color: $main-black;
+    text-decoration: none;
+    line-height: 16px;
+    border-bottom: 1px solid $main-black;
+  }
+}
+
+.help__text-content {
+  padding-top: 10px;
+
+  & .help__offer span {
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,163 @@
+$shift: -20px;
+
+i.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url(/assets/img/sprite.svg);
+  background-repeat: no-repeat;
+
+  &.icon-search {
+    background-image: url(/assets/img/search.svg);
+    background-position: center;
+  }
+
+  &.icon-phone {
+    background-position: 0 0;
+  }
+  &.icon-truck {
+    background-position: $shift 0;
+  }
+  &.icon-box {
+    background-position: 2*$shift 0;
+  }
+  &.icon-scan {
+    background-position: 3*$shift 0;
+  }
+  &.icon-person {
+    background-position: 4*$shift 0;
+  }
+  &.icon-sheet {
+    background-position: 5*$shift 0;
+  }
+  &.icon-envelope {
+    background-position: 6*$shift 0;
+  }
+  &.icon-up-down {
+    background-position: 7*$shift 0;
+  }
+  &.icon-bell {
+    background-position: 8*$shift 0;
+  }
+  &.icon-hookup {
+    background-position: 9*$shift 0;
+  }
+  &.icon-frame {
+    background-position: 10*$shift 0;
+  }
+  &.icon-expand-collapse {
+    background-position: 11*$shift 0;
+  }
+  &.icon-diskette {
+    background-position: 12*$shift 0;
+  }
+  &.icon-bin {
+    background-position: 13*$shift 0;
+  }
+  &.icon-multiply {
+    background-position: 14*$shift 0;
+  }
+  &.icon-list {
+    background-position: 15*$shift 0;
+  }
+
+  &.icon-dropdown {
+    background-position: 11*$shift $shift;
+  }
+
+
+
+  &.icon-chat {
+    background-image: url(/assets/img/chat.svg);
+    background-position: center;
+  }
+
+  &.icon-man-in-hat {
+    width: 26px;
+    height: 26px;
+    background-image: url(/assets/img/person.svg);
+    background-position: center;
+  }
+
+  &.icon-gear {
+    width: 26px;
+    height: 26px;
+    background-image: url(/assets/img/gear.svg);
+    background-position: center;
+  }
+
+  &.icon-notify {
+    width: 26px;
+    height: 26px;
+    background-image: url(/assets/img/bell.svg);
+    background-position: center;
+  }
+}
+
+
+
+.menu-item:hover,
+.menu-item--expanded,
+.menu-item--selected,
+.submenu-item:hover,
+.submenu-item--selected {
+  & .icon {
+    &.icon-phone {
+      background-position: 0 $shift;
+    }
+
+    &.icon-truck {
+      background-position: $shift $shift;
+    }
+    &.icon-box {
+      background-position: $shift*2 $shift;
+    }
+
+    &.icon-scan {
+      background-position: 3*$shift $shift;
+    }
+    &.icon-person {
+      background-position: 4*$shift $shift;
+    }
+    &.icon-sheet {
+      background-position: 5*$shift $shift;
+    }
+    &.icon-envelope {
+      background-position: 6*$shift $shift;
+    }
+    &.icon-up-down {
+      background-position: 7*$shift $shift;
+    }
+    &.icon-bell {
+      background-position: 8*$shift $shift;
+    }
+    &.icon-hookup {
+      background-position: 9*$shift $shift;
+    }
+    &.icon-frame {
+      background-position: 10*$shift $shift;
+    }
+    &.icon-expand-collapse {
+      background-position: 11*$shift $shift;
+    }
+    &.icon-diskette {
+      background-position: 12*$shift $shift;
+    }
+    &.icon-bin {
+      background-position: 13*$shift $shift;
+    }
+    &.icon-multiply {
+      background-position: 14*$shift $shift;
+    }
+    &.icon-list {
+      background-position: 15*$shift $shift;
+    }
+
+  }
+}
+
+.menu-item--expanded, .menu-item--expanded:hover {
+  & i.icon.icon-expand-collapse {
+    background-position: 17*$shift $shift;
+  }
+}
