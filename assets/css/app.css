@@ -10256,6 +10256,18 @@ i.icon.icon-dropdown {
   background-position: -220px -20px;
 }
 
+i.icon.icon-refresh {
+  background-position: 0 -40px;
+}
+
+i.icon.icon-calendar {
+  background-position: -20px -40px;
+}
+
+i.icon.icon-export {
+  background-position: -40px -40px;
+}
+
 i.icon.icon-chat {
   background-image: url(/assets/img/chat.svg);
   background-position: center;
@@ -10279,6 +10291,13 @@ i.icon.icon-notify {
   width: 26px;
   height: 26px;
   background-image: url(/assets/img/bell.svg);
+  background-position: center;
+}
+
+i.icon.icon-elevator-button {
+  width: 8px;
+  height: 12px;
+  background-image: url(/assets/img/elevator-button.svg);
   background-position: center;
 }
 
@@ -10414,6 +10433,83 @@ i.icon.icon-notify {
   background-position: -340px -20px;
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-Regular.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-Regular.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-Regular.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-Regular.svg#aller") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-Bold.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-Bold.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-Bold.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-Bold.svg#aller") format("svg");
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-Black.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-Black.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-Black.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-Black.svg#aller") format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-ExtraBold.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-ExtraBold.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-ExtraBold.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-ExtraBold.svg#aller") format("svg");
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-ExtraLight.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-ExtraLight.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-ExtraLight.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-ExtraLight.svg#aller") format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-Light.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-Light.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-Light.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-Light.svg#aller") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-Medium.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-Medium.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-Medium.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-Medium.svg#aller") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/nunito/webfonts/Nunito-SemiBold.eot");
+  src: url("../fonts/nunito/webfonts/Nunito-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/nunito/webfonts/Nunito-SemiBold.woff") format("woff"), url("../fonts/nunito/webfonts/Nunito-SemiBold.ttf") format("truetype"), url("../fonts/nunito/webfonts/Nunito-SemiBold.svg#aller") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #3F3F57;
+}
+
 html, body {
   height: 100%;
 }
@@ -10448,16 +10544,21 @@ html, body {
 .search input {
   width: 100%;
   height: 100%;
+  padding: 0 12px;
   border: none;
-  padding: 0 0 0 40px;
-  color: #B0B9C7;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
+  color: #B0B9C7;
+  padding-left: 40px;
 }
 
 .search input::-webkit-input-placeholder {
   color: #B0B9C7;
   letter-spacing: 0.5px;
+}
+
+.search input:focus {
+  outline: none;
 }
 
 .search .search__button {
@@ -10473,8 +10574,13 @@ html, body {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
   color: #FFF;
-  background-color: #3077C2;
   letter-spacing: 0.5px;
+  cursor: pointer;
+  background-color: #689CD3;
+}
+
+.search .search__button button:hover {
+  background-color: #3077C2;
 }
 
 .top-navigation__toolbar {
@@ -10638,12 +10744,73 @@ html, body {
 }
 
 .breadcrumbs {
-  margin: 22px 0 0 20px;
+  margin-top: 22px;
+  margin-left: 20px;
   color: #B0B9C7;
 }
 
 .breadcrumbs .breadcrumbs__divider {
   margin: 0 4px;
+}
+
+.grid__date-picker input {
+  width: 208px;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px;
+  border: none;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  color: #B0B9C7;
+}
+
+.grid__date-picker input::-webkit-input-placeholder {
+  color: #B0B9C7;
+  letter-spacing: 0.5px;
+}
+
+.grid__date-picker input:focus {
+  outline: none;
+}
+
+.grid__date-picker .grid__toolbar__button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.grid__toolbar {
+  margin-top: 21px;
+  padding: 0 20px;
+}
+
+.grid__toolbar .row {
+  height: 32px;
+}
+
+.grid__toolbar .search {
+  margin-left: 0;
+  padding-right: 0;
+  height: 100%;
+}
+
+.grid__toolbar__button {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #689CD3;
+}
+
+.grid__toolbar__button:hover {
+  background-color: #3077C2;
+}
+
+.grid__toolbar__button .icon {
+  margin: auto;
+}
+
+.grid__toolbar-item:not(:last-child) {
+  margin-right: 15px;
 }
 
 .grid__container {
@@ -10660,14 +10827,253 @@ html, body {
   font-size: 24px;
 }
 
-.grid__toolbar {
-  margin-top: 22px;
+.grid__rows .grid__cell .row-checkbox {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
 }
 
-.grid__toolbar .search {
-  margin-left: 20px;
-  padding-right: 0;
-  height: 32px;
+.grid__rows .grid__cell .row-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.grid__rows .grid__cell .row-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 2px solid #9097AD;
+  border-radius: 2px;
+}
+
+.grid__rows .grid__cell .row-checkbox input:checked ~ .checkmark {
+  background-color: #3077C2;
+  border: 2px solid #3077C2;
+  border-radius: 2px;
+}
+
+.grid__rows .grid__cell .row-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.grid__rows .grid__cell .row-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.grid__rows .grid__cell .row-checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #FFF;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.grid table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  font-size: 12px;
+}
+
+.grid table tr:nth-child(2n + 3) {
+  background-color: #F9F9FB;
+}
+
+.grid table tr:nth-child(2n) {
+  background-color: #FFF;
+}
+
+.grid table tr:nth-child(n + 2):not(:last-child) {
+  border-bottom: 1px solid #E2E5EE;
+}
+
+.grid table tr.grid__header {
+  height: 60px;
+  background-color: #689CD3;
+  color: #FFF;
+  text-align: center;
+  line-height: 16px;
+}
+
+.grid table tr.grid__header th .grid__sort {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.grid table tr.grid__header th:first-child {
+  width: 60px;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  border-radius: 2px;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox input:checked ~ .checkmark {
+  background-color: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 2px;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.grid table tr.grid__header .grid__select-all-checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #689CD3;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.grid table tr.grid__data-row {
+  height: 49px;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 2px solid #9097AD;
+  border-radius: 2px;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox input:checked ~ .checkmark {
+  background-color: #3077C2;
+  border: 2px solid #3077C2;
+  border-radius: 2px;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #FFF;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.grid table tr td {
+  text-align: center;
 }
 
 body {

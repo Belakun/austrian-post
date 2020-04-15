@@ -12,7 +12,7 @@
 
     <!-- Icons for this template -->
     <link
-      href="assets/fonts/font-awesome/css/all.min.css"
+      href="assets/fonts/nunito/css/all.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -23,7 +23,7 @@
   </head>
 
   <body class="container-fluid d-flex h-100">
-    <div class="row flex-grow-1">
+    <div class="row flex-grow-1 flex-nowrap">
       <div class="col-3 d-flex flex-column left-sidebar menu">
         <div class="row ">
           <div class="col">
@@ -215,7 +215,7 @@
                 <div class="row no-gutters">
                   <div class="col">
                     <i class="icon icon-search"></i>
-                    <input type="text" name="search" id="search" placeholder="Search...">
+                    <input type="text" name="search" placeholder="Search...">
                   </div>
                   <div class="col-auto search__button">
                     <button>Search</button>
@@ -281,16 +281,17 @@
                 <div class="row">
                   <div class="col grid__name"><span>Shipping List</span></div>
                 </div>
-                <div class="row">
+                <div class="row grid__toolbar ">
                   <div class="col">
-                    <div class="row align-items-center grid__toolbar">
-                      <div class="col-auto search">
-                        <div class="row">
+                    <div class="row align-items-center no-gutters flex-nowrap">
+
+                      <div class="col-auto grid__toolbar-item search">
+                        <div class="row no-gutters">
                           <div class="col">
                             <div class="row no-gutters">
                               <div class="col">
                                 <i class="icon icon-search"></i>
-                                <input type="text" name="search" id="search" placeholder="Search...">
+                                <input type="text" name="search" placeholder="Search...">
                               </div>
                               <div class="col-auto search__button">
                                 <button>Search</button>
@@ -299,19 +300,262 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-auto mr-auto">
+
+                      <div class="col-auto mr-auto grid__toolbar-item grid__advanced-search">
                         <span>Advanced Search</span>
                       </div>
-                      <div class="col-auto ml-auto">refresh</div>
-                      <div class="col-auto ml-auto">date picker</div>
-                      <div class="col-auto ml-auto">export</div>
+
+                      <div class="col-auto grid__toolbar-item grid__refresh">
+                        <div class="grid__toolbar__button d-flex align-items-center">
+                          <i class="icon icon-refresh"></i>
+                        </div>
+                      </div>
+
+                      <div class="col-auto grid__toolbar-item grid__date-picker">
+                        <div class="row no-gutters">
+                          <div class="col-auto">
+                            <input type="text" value="03.03.2020 - 04.04.2020">
+                          </div>
+                          <div class="col">
+                            <div class="grid__toolbar__button d-flex align-items-center">
+                              <i class="icon icon-calendar"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-auto grid__toolbar-item grid__export">
+                        <div class="grid__toolbar__button d-flex align-items-center">
+                          <i class="icon icon-export"></i>
+                        </div>
+                      </div>
                     </div>
 
                   </div>
                 </div>
+
+                <!-- GRID -->
                 <div class="row">
-                  <div class="col">grid</div>
+                  <div class="col grid">
+
+                    <table>
+                      <tr class="grid__header">
+                        <th>
+                              <label class="grid__select-all-checkbox">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                              </label>
+                        </th>
+                        <th>
+                          System Reference
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Type</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Sender Company</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Postcode Receiver</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Country Receiver</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center  flex-nowrap">
+                            <div class="col-auto">Reference</div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Status</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center  flex-nowrap">
+                            <div class="col-auto">Barcode</div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center no-gutters flex-nowrap">
+                            <div class="col-auto">Creation Date</div>
+                            <div class="col grid__sort">
+                              <i class="icon icon-elevator-button"></i>
+                            </div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center  flex-nowrap">
+                            <div class="col-auto">Carrier Code</div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center  flex-nowrap">
+                            <div class="col-auto">Tickets</div>
+                          </div>
+                        </th>
+                        <th>
+                          <div class="row align-items-center  flex-nowrap">
+                            <div class="col-auto">Actions</div>
+                          </div>
+                        </th>
+                      </tr>
+
+                      <tr class="grid__data-row">
+                        <td>
+                          <label class="grid__select-row-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>
+                          1748936043
+                        </td>
+                        <td>
+                          Delivery
+                        </td>
+                        <td>
+                          Antratek Electronics
+                        </td>
+                        <td>
+                          1071CD
+                        </td>
+                        <td>
+                          Netherlands
+                        </td>
+                        <td>
+                          ORD00168
+                        </td>
+                        <td>
+                          Registered
+                        </td>
+                        <td>
+                          <a href="">10331230417</a>
+                          <br>
+                          <a href="">17610150718</a>
+                        </td>
+                        <td>
+                          07-01-2020
+                        </td>
+                        <td>
+                          dpd_germany
+                        </td>
+                        <td></td>
+                        <td>actions</td>
+                      </tr>
+                      <tr class="grid__data-row">
+                        <td>
+                          <label class="grid__select-row-checkbox">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>
+                          1748936043
+                        </td>
+                        <td>
+                          Delivery
+                        </td>
+                        <td>
+                          Antratek Electronics
+                        </td>
+                        <td>
+                          1071CD
+                        </td>
+                        <td>
+                          Netherlands
+                        </td>
+                        <td>
+                          ORD00168
+                        </td>
+                        <td>
+                          Registered
+                        </td>
+                        <td>
+                          <a href="">10331230417</a>
+                          <br>
+                          <a href="">17610150718</a>
+                        </td>
+                        <td>
+                          07-01-2020
+                        </td>
+                        <td>
+                          dpd_germany
+                        </td>
+                        <td></td>
+                        <td>actions</td>
+                      </tr>
+                      <tr class="grid__data-row">
+                        <td>
+                          <label class="grid__select-row-checkbox">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td>
+                          1748936043
+                        </td>
+                        <td>
+                          Delivery
+                        </td>
+                        <td>
+                          Antratek Electronics
+                        </td>
+                        <td>
+                          1071CD
+                        </td>
+                        <td>
+                          Netherlands
+                        </td>
+                        <td>
+                          ORD00168
+                        </td>
+                        <td>
+                          Registered
+                        </td>
+                        <td>
+                          <a href="">10331230417</a>
+                          <br>
+                          <a href="">17610150718</a>
+                        </td>
+                        <td>
+                          07-01-2020
+                        </td>
+                        <td>
+                          dpd_germany
+                        </td>
+                        <td></td>
+                        <td>actions</td>
+                      </tr>
+                    </table>
+
+                  </div>
                 </div>
+
+
               </div>
             </div>
             <div class="row">pagination</div>

@@ -1,0 +1,16 @@
+@import "colors";
+@import "mixins";
+
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-Regular', 400);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-Bold', 700);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-Black', 900);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-ExtraBold', 800);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-ExtraLight', 200);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-Light', 300);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-Medium', 500);
+@include font('Nunito', '../fonts/nunito/webfonts/Nunito-SemiBold', 600);
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: $main-dark-grey;
+}

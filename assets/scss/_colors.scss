@@ -2,14 +2,18 @@ $main-white:        #FFF;
 $main-black:        #000;
 $main-yellow:       #ffdc00;
 $main-blue:         #3077C2;
+$main-light-blue:   #689CD3;
 $main-dark-grey:    #3F3F57;
 $main-grey:         #666;
 $main-light-grey:   #9097AD;
 $main-pale-grey:    #B0B9C7;
+$main-lightest-grey:#E2E5EE;
 $main-another-gray: #F1F1F1;
 $main-white-gray:   #F9F9FB;
 
 
+$button-color: $main-light-blue;
+$button-hover-color: $main-blue;
 
 // bg
 $bg-light-grey: $main-white-gray;

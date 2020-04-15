@@ -1,0 +1,16 @@
+@import "../colors";
+@import "../variables";
+
+.grid__date-picker {
+
+
+  & input {
+    width: 208px;
+    @include input();
+  }
+
+  & .grid__toolbar__button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

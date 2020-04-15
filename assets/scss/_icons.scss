@@ -65,6 +65,17 @@ i.icon {
     background-position: 11*$shift $shift;
   }
 
+  &.icon-refresh {
+    background-position: 0 2*$shift;
+  }
+
+  &.icon-calendar {
+    background-position: $shift 2*$shift;
+  }
+
+  &.icon-export {
+    background-position: 2*$shift 2*$shift;
+  }
 
 
   &.icon-chat {
@@ -90,6 +101,13 @@ i.icon {
     width: 26px;
     height: 26px;
     background-image: url(/assets/img/bell.svg);
+    background-position: center;
+  }
+
+  &.icon-elevator-button {
+    width: 8px;
+    height: 12px;
+    background-image: url(/assets/img/elevator-button.svg);
     background-position: center;
   }
 }
