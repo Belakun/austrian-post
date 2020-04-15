@@ -1,0 +1,12 @@
+@import "../colors";
+@import "../variables";
+
+.grid__toolbar {
+  margin-top: 22px;
+
+  & .search {
+    margin-left: 20px;
+    padding-right: 0;
+    height: 32px;
+  }
+}

@@ -16,7 +16,9 @@
 }
 
 .menu-items {
-  // overflow: scroll;
+  > .col {
+    height: calc(100vh - #{$nav-bar-height} - #{$help-section-height});
+  }
 }
 
 .row.menu-item {

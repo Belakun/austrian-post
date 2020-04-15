@@ -10427,22 +10427,27 @@ html, body {
 }
 
 .search {
+  height: 40px;
   max-width: 426px;
   margin-left: 40px;
   font-size: 14px;
   border: none;
 }
 
+.search * {
+  height: 100%;
+}
+
 .search i.icon {
   position: absolute;
   display: block;
   width: 40px;
-  height: 40px;
+  height: 100%;
 }
 
 .search input {
   width: 100%;
-  height: 40px;
+  height: 100%;
   border: none;
   padding: 0 0 0 40px;
   color: #B0B9C7;
@@ -10455,9 +10460,13 @@ html, body {
   letter-spacing: 0.5px;
 }
 
+.search .search__button {
+  height: 100%;
+}
+
 .search .search__button button {
   width: 100%;
-  height: 40px;
+  height: 100%;
   min-width: 80px;
   margin-left: -4px;
   border: none;
@@ -10549,6 +10558,10 @@ html, body {
   height: 80px;
 }
 
+.menu-items > .col {
+  height: calc(100vh - 80px - 100px);
+}
+
 .row.menu-item {
   height: 48px;
   padding-left: 24px;
@@ -10622,6 +10635,39 @@ html, body {
 
 .left-sidebar {
   box-shadow: 10px 0px 15px rgba(152, 151, 175, 0.1);
+}
+
+.breadcrumbs {
+  margin: 22px 0 0 20px;
+  color: #B0B9C7;
+}
+
+.breadcrumbs .breadcrumbs__divider {
+  margin: 0 4px;
+}
+
+.grid__container {
+  padding: 0;
+  margin: 60px;
+  background-color: #F9F9FB;
+  box-shadow: 0px 10px 15px rgba(152, 151, 175, 0.1);
+  border-radius: 4px;
+}
+
+.grid__name {
+  margin-left: 20px;
+  color: #3F3F57;
+  font-size: 24px;
+}
+
+.grid__toolbar {
+  margin-top: 22px;
+}
+
+.grid__toolbar .search {
+  margin-left: 20px;
+  padding-right: 0;
+  height: 32px;
 }
 
 body {

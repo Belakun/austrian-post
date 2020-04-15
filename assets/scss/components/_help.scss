@@ -1,7 +1,8 @@
 @import "../colors";
+@import "../variables";
 
 .help {
-  height: 100px;
+  height: $help-section-height;
   background-color: $main-yellow;
 
   & .help__icon {

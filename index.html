@@ -24,7 +24,7 @@
 
   <body class="container-fluid d-flex h-100">
     <div class="row flex-grow-1">
-      <div class="col-3 left-sidebar d-flex flex-column menu">
+      <div class="col-3 d-flex flex-column left-sidebar menu">
         <div class="row ">
           <div class="col">
             <div class="row align-items-center menu-header">
@@ -40,8 +40,8 @@
               </div>
             </div>
 
-            <div class="row no-gutters menu-items">
-              <div class="col">
+            <div class="row menu-items">
+              <div class="col overflow-auto">
                 <div class="row menu-item align-content-center">
                   <div class="col-2">
                     <i class="icon icon-phone"></i>
@@ -207,7 +207,7 @@
 
 
 
-      <div class="col main-content">
+      <div class="col">
         <div class="row align-items-center top-navigation">
           <div class="col mr-auto search">
             <div class="row">
@@ -269,8 +269,53 @@
 
           </div>
         </div>
-        <div class="row main-content">
-          <div class="col">content table</div>
+        <div class="row">
+          <div class="col">
+            <div class="row">
+              <div class="col grid__container">
+                <div class="row no-gutters justify-content-start breadcrumbs">
+                  <div class="col-auto breadcrumbs__level-0">Shipping</div>
+                  <div class="col-auto breadcrumbs__divider">></div>
+                  <div class="col-auto breadcrumbs__level-1">Shipping List</div>
+                </div>
+                <div class="row">
+                  <div class="col grid__name"><span>Shipping List</span></div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="row align-items-center grid__toolbar">
+                      <div class="col-auto search">
+                        <div class="row">
+                          <div class="col">
+                            <div class="row no-gutters">
+                              <div class="col">
+                                <i class="icon icon-search"></i>
+                                <input type="text" name="search" id="search" placeholder="Search...">
+                              </div>
+                              <div class="col-auto search__button">
+                                <button>Search</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto mr-auto">
+                        <span>Advanced Search</span>
+                      </div>
+                      <div class="col-auto ml-auto">refresh</div>
+                      <div class="col-auto ml-auto">date picker</div>
+                      <div class="col-auto ml-auto">export</div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">grid</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">pagination</div>
+          </div>
 
         </div>
       </div>
