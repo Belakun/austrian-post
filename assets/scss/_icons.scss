@@ -110,6 +110,13 @@ i.icon {
     background-image: url(/assets/img/elevator-button.svg);
     background-position: center;
   }
+
+  &.icon-toggle-menu {
+    width: 20px;
+    height: 20px;
+    background-image: url(/assets/img/fat-dash.svg);
+    background-position: center;
+  }
 }
 
 

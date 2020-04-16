@@ -79,6 +79,10 @@
       &.grid__data-row {
         height: 49px;
 
+        &.grid__data-row--selected td {
+          background-color: $grid-row-selected;
+        }
+
         & td {
 
           & .grid__select-row-checkbox {

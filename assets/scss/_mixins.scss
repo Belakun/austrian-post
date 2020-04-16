@@ -36,6 +36,11 @@
   }
 }
 
+@mixin hidden-checkbox() {
+  position: absolute;
+  left: -9999px;
+}
+
 @mixin custom-checkbox-color($unchecked-border, $checked-fill, $checked-checkmark) {
   margin: 0;
   margin-left: auto;

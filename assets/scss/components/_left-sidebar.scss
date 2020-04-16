@@ -2,5 +2,63 @@
 @import "help";
 
 .left-sidebar {
+  width: 280px;
+  max-width: 280px;
+  z-index: 100;
   box-shadow: 10px 0px 15px rgba(152, 151, 175, 0.1);
 }
+.menu-toggle-container {
+  margin-left: auto;
+  padding: 0;
+}
+
+label.menu-toggle {
+  padding-right: 22px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+#left-sidebar-toggle {
+  @include hidden-checkbox();
+
+  &:checked {
+    & + .left-sidebar {
+      //narrow menu here
+      width: 80px;
+
+      & .menu-toggle {
+        & .icon-toggle-menu {
+          background-image: url(/assets/img/hamburger.svg);
+        }
+      }
+
+      & .ap-logo {
+        display: none;
+      }
+
+      & .menu-toggle-container {
+        margin: auto;
+
+        & .menu-toggle {
+          padding: 0;
+        }
+      }
+
+      & .menu-items {
+        & .menu-item-name {
+          display: none;
+        }
+
+        & .icon-expand-collapse {
+          position: absolute;
+          right: -30px;
+        }
+      }
+
+      & .help__text-content {
+        display: none;
+      }
+    }
+  }
+}
+

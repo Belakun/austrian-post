@@ -2,9 +2,8 @@
 @import "../variables";
 @import "submenu";
 
-.menu {
-  font-size: 14px;
-}
+$menu-item-height: 48px;
+
 
 .menu-header {
   height: $nav-bar-height;
@@ -16,13 +15,16 @@
 }
 
 .menu-items {
+  overflow-y: scroll;
+  z-index: 100;
+
   > .col {
     height: calc(100vh - #{$nav-bar-height} - #{$help-section-height});
   }
 }
 
 .row.menu-item {
-  height: 48px;
+  height: $menu-item-height;
   padding-left: 24px;
   color: $main-grey;
   cursor: pointer;
@@ -30,10 +32,6 @@
   & .col-2 {
     // width: 20px;
     padding: 0;
-  }
-
-  & .menu-item__container {
-    // padding: 0;
   }
 
   & .menu-item-name {
@@ -56,4 +54,126 @@
     border-left: 5px solid $main-yellow;
     color: $main-black;
   }
+
+
+  & label.submenu-toggle {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    height: $menu-item-height;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    & > .row {
+      height: 100%;
+    }
+  }
 }
+
+.menu-item__container {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+}
+
+input.submenu-toggler {
+  @include hidden-checkbox();
+}
+
+
+// submenu expanded
+input.submenu-toggler:checked {
+  & + .row {
+    color: $main-black;
+    background-color: $main-yellow;
+
+    & label {
+      & i.icon.icon-expand-collapse {
+        background-position: 17*$shift $shift;
+      }
+    }
+
+    & .submenu {
+      display: block;
+    }
+  }
+}
+
+
+// expand menu while sidebar is collapsed
+#left-sidebar-toggle:checked {
+  & + .left-sidebar {
+    & .menu-items {
+      overflow-y: visible;
+
+      & .menu-item:hover {
+        & i.icon.icon-expand-collapse {
+          background-position: 16*$shift $shift;
+        }
+
+      }
+
+      & i.icon.icon-expand-collapse {
+        background-position: 16*$shift 0;
+      }
+    }
+
+
+
+
+
+    & .submenu-toggler:checked {
+
+      & + .row {
+        width: 360px;
+
+        & .menu-item {
+
+
+          & .menu-item-name {
+            display: initial;
+          }
+        }
+
+
+        & i.icon.icon-expand-collapse {
+          background-position: 18*$shift $shift;
+          right: 15px;
+        }
+
+
+        & .submenu {
+          position: absolute;
+          left: 95px;
+          width: 280px;
+
+
+          & .submenu-item {
+
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+// position: absolute;
+//     width: 280px;
+//     z-index: 1000;
+//     margin: 0;
+//     padding: 0;
+//     margin-left: -15px;
+
+
+//     .menu-item {
+//       position: absolute;
+//     width: 280px;
+//     z-index: 1000;
+//     }

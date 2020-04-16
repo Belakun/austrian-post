@@ -10301,6 +10301,13 @@ i.icon.icon-elevator-button {
   background-position: center;
 }
 
+i.icon.icon-toggle-menu {
+  width: 20px;
+  height: 20px;
+  background-image: url(/assets/img/fat-dash.svg);
+  background-position: center;
+}
+
 .menu-item:hover .icon.icon-phone,
 .menu-item--expanded .icon.icon-phone,
 .menu-item--selected .icon.icon-phone,
@@ -10651,10 +10658,6 @@ html, body {
   color: #000;
 }
 
-.menu {
-  font-size: 14px;
-}
-
 .menu-header {
   height: 80px;
   background-color: #ffdc00;
@@ -10662,6 +10665,11 @@ html, body {
 
 .menu-header .row {
   height: 80px;
+}
+
+.menu-items {
+  overflow-y: scroll;
+  z-index: 100;
 }
 
 .menu-items > .col {
@@ -10698,6 +10706,82 @@ html, body {
   padding-left: 19px;
   border-left: 5px solid #ffdc00;
   color: #000;
+}
+
+.row.menu-item label.submenu-toggle {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin-bottom: 0;
+  height: 48px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.row.menu-item label.submenu-toggle > .row {
+  height: 100%;
+}
+
+.menu-item__container {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+}
+
+input.submenu-toggler {
+  position: absolute;
+  left: -9999px;
+}
+
+input.submenu-toggler:checked + .row {
+  color: #000;
+  background-color: #ffdc00;
+}
+
+input.submenu-toggler:checked + .row label i.icon.icon-expand-collapse {
+  background-position: -340px -20px;
+}
+
+input.submenu-toggler:checked + .row .submenu {
+  display: block;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items {
+  overflow-y: visible;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items .menu-item:hover i.icon.icon-expand-collapse {
+  background-position: -320px -20px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items i.icon.icon-expand-collapse {
+  background-position: -320px 0;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row {
+  width: 360px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row .menu-item .menu-item-name {
+  display: initial;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row i.icon.icon-expand-collapse {
+  background-position: -360px -20px;
+  right: 15px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row .submenu {
+  position: absolute;
+  left: 95px;
+  width: 280px;
 }
 
 .help {
@@ -10740,7 +10824,59 @@ html, body {
 }
 
 .left-sidebar {
+  width: 280px;
+  max-width: 280px;
+  z-index: 100;
   box-shadow: 10px 0px 15px rgba(152, 151, 175, 0.1);
+}
+
+.menu-toggle-container {
+  margin-left: auto;
+  padding: 0;
+}
+
+label.menu-toggle {
+  padding-right: 22px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+#left-sidebar-toggle {
+  position: absolute;
+  left: -9999px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar {
+  width: 80px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-toggle .icon-toggle-menu {
+  background-image: url(/assets/img/hamburger.svg);
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .ap-logo {
+  display: none;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-toggle-container {
+  margin: auto;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-toggle-container .menu-toggle {
+  padding: 0;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items .menu-item-name {
+  display: none;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items .icon-expand-collapse {
+  position: absolute;
+  right: -30px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .help__text-content {
+  display: none;
 }
 
 .breadcrumbs {
@@ -11002,6 +11138,10 @@ html, body {
 
 .grid table tr.grid__data-row {
   height: 49px;
+}
+
+.grid table tr.grid__data-row.grid__data-row--selected td {
+  background-color: #F2F5F9;
 }
 
 .grid table tr.grid__data-row td .grid__select-row-checkbox {
