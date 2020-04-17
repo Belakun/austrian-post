@@ -1,42 +1,109 @@
 @import "../colors";
 @import "../variables";
-@import "components/grid-toolbar";
+@import "grid-toolbar";
+@import "pagination";
 
-.grid__container {
-  padding: 0;
-  margin: 60px;
-  background-color: $main-white-gray;
-  box-shadow: 0px 10px 15px rgba(152, 151, 175, 0.1);
-  border-radius: 4px;
+$grid-margin: 30px;
+.main {
 
 }
 
-.grid__name {
-  margin-left: 20px;
-  color: $main-dark-grey;
-  font-size: 24px;
-}
+.workzone {
+  height: calc(100vh - #{$nav-bar-height});
+  & > .col {
+    height: 100%;
 
-.grid__rows {
-  & .grid__cell {
-    .row-checkbox {
-      @include custom-checkbox-color($main-light-grey, $main-blue, $main-white);
+    & > .row:first-child {
+      height: 100%;
     }
-
   }
+
 }
 
 .grid {
+  // 100% - top margin - breadcrumbs - header - toolbar
+  // height: calc(100% - 43px - 36px - 53px);
+  // overflow: scroll;
+
+  & > .col {
+    height: 100%;
+  }
+
+  &__container {
+    height: calc(100% - #{$help-section-height} - #{$grid-margin});
+    padding: 0;
+    margin: $grid-margin $grid-margin 0 $grid-margin;
+    background-color: $main-white-gray;
+    box-shadow: 0px 10px 15px rgba(152, 151, 175, 0.1);
+    border-radius: 4px;
+
+  }
+
+  &__name {
+    margin-left: 20px;
+    color: $main-dark-grey;
+    font-size: 24px;
+  }
+
+  &__select-all-checkbox {
+    @include custom-checkbox-color($main-white, $main-white, $main-light-blue);
+  }
+
+  &__select-row-checkbox {
+    @include custom-checkbox-color($main-light-grey, $main-blue, $main-white);
+  }
+
+  &__header {
+    height: 60px;
+    background-color: $main-light-blue;
+    color: $main-white;
+    text-align: center;
+    line-height: 16px;
+
+    & th {
+      padding: 0 8px;
+
+      &:first-child {
+        width: 60px;
+      }
+
+      & .col:first-child {
+        margin-left: 12px;
+      }
+    }
+
+    &__sort {
+      margin-left: 4px;
+      cursor: pointer;
+    }
+  }
+
+  &__data-row {
+    height: 49px;
+
+    &--selected td {
+      background-color: $grid-row-selected;
+    }
+
+    &__actions {
+      padding: 0 8px;
+    }
+  }
+
   & table {
-    margin-top: 20px;
+    // margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 80px;
     width: 100%;
     font-size: 12px;
 
+    & tbody {
+      overflow-y: scroll;
+
+    }
+
     & tr {
-
-
       &:nth-child(2n + 3) {
         background-color: $main-white-gray;
       }
@@ -49,53 +116,9 @@
         border-bottom: 1px solid $main-lightest-grey;
       }
 
-      &.grid__header {
-
-        height: 60px;
-        background-color: $main-light-blue;
-        color: $main-white;
-        text-align: center;
-        line-height: 16px;
-
-        & th {
-
-          & .grid__sort {
-            margin-left: 8px;
-            cursor: pointer;
-          }
-
-          &:first-child {
-            width: 60px;
-          }
-        }
-
-
-
-        & .grid__select-all-checkbox {
-          @include custom-checkbox-color($main-white, $main-white, $main-light-blue);
-        }
-      }
-
-      &.grid__data-row {
-        height: 49px;
-
-        &.grid__data-row--selected td {
-          background-color: $grid-row-selected;
-        }
-
-        & td {
-
-          & .grid__select-row-checkbox {
-            @include custom-checkbox-color($main-light-grey, $main-blue, $main-white);
-          }
-        }
-      }
-
       & td {
         text-align: center;
       }
     }
-
-
   }
 }

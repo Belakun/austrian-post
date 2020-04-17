@@ -10252,6 +10252,34 @@ i.icon.icon-list {
   background-position: -300px 0;
 }
 
+i.icon.icon-gt-grey {
+  background-position: -340px 0;
+}
+
+i.icon.icon-eye {
+  background-position: -380px 0;
+}
+
+i.icon.icon-eye-disabled {
+  background-position: -380px -20px;
+}
+
+i.icon.icon-pen {
+  background-position: -400px 0;
+}
+
+i.icon.icon-pen-disabled {
+  background-position: -400px -20px;
+}
+
+i.icon.icon-archive {
+  background-position: -420px 0;
+}
+
+i.icon.icon-delete {
+  background-position: -440px 0;
+}
+
 i.icon.icon-dropdown {
   background-position: -220px -20px;
 }
@@ -10617,6 +10645,8 @@ html, body {
 }
 
 .top-navigation {
+  -webkit-box-flex: 0;
+          flex-grow: 0;
   background-color: #ffdc00;
   height: 80px;
   box-shadow: 13px 9px 15px rgba(152, 151, 175, 0.1);
@@ -10678,6 +10708,7 @@ html, body {
 
 .row.menu-item {
   height: 48px;
+  max-height: 48px;
   padding-left: 24px;
   color: #666;
   cursor: pointer;
@@ -10715,7 +10746,6 @@ html, body {
   -webkit-box-direction: normal;
           flex-direction: column;
   margin-bottom: 0;
-  height: 48px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -10725,6 +10755,31 @@ html, body {
 
 .row.menu-item label.submenu-toggle > .row {
   height: 100%;
+}
+
+.menu-item__expandable .menu-item > .col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100%;
+}
+
+.menu-item__expandable .menu-item > .col .submenu-toggle {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+.menu-item__expandable .menu-item > .col .submenu-toggle .row {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.menu-item__expandable .menu-item > .col .submenu-toggle .row .menu-item__icon {
+  margin-right: 8px;
 }
 
 .menu-item__container {
@@ -10740,16 +10795,16 @@ input.submenu-toggler {
   left: -9999px;
 }
 
-input.submenu-toggler:checked + .row {
+input.submenu-toggler:checked + .menu-item__expandable {
   color: #000;
   background-color: #ffdc00;
 }
 
-input.submenu-toggler:checked + .row label i.icon.icon-expand-collapse {
+input.submenu-toggler:checked + .menu-item__expandable label i.icon.icon-expand-collapse {
   background-position: -340px -20px;
 }
 
-input.submenu-toggler:checked + .row .submenu {
+input.submenu-toggler:checked + .menu-item__expandable .submenu {
   display: block;
 }
 
@@ -10757,30 +10812,92 @@ input.submenu-toggler:checked + .row .submenu {
   overflow-y: visible;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .menu-items .menu-item:hover i.icon.icon-expand-collapse {
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item {
+  height: auto;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item:hover i.icon.icon-expand-collapse {
   background-position: -320px -20px;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .menu-items i.icon.icon-expand-collapse {
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item i.icon.icon-expand-collapse {
   background-position: -320px 0;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row {
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  align-content: center;
+  max-height: 48px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable > .col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable .menu-item {
+  height: auto;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable .menu-item:hover {
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  align-content: center;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable .menu-item:hover i.icon.icon-expand-collapse {
+  background-position: -320px -20px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable .menu-item__icon {
+  margin-left: 8px;
+  width: 20px;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col > .menu-item__expandable .menu-item__icon i.icon.icon-expand-collapse {
+  background-position: -320px 0;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable {
   width: 360px;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row .menu-item .menu-item-name {
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable .menu-item {
+  height: 48px;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable .menu-item .menu-item-name {
   display: initial;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row i.icon.icon-expand-collapse {
-  background-position: -360px -20px;
-  right: 15px;
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable .menu-item .menu-item__icon {
+  margin-right: 12px;
+  width: 20px;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .row .submenu {
-  position: absolute;
-  left: 95px;
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable .menu-item .menu-item__icon i.icon.icon-expand-collapse {
+  background-position: -360px -20px !important;
+}
+
+#left-sidebar-toggle:checked + .left-sidebar .submenu-toggler:checked + .menu-item__expandable .submenu {
+  margin-left: auto;
   width: 280px;
 }
 
@@ -10824,7 +10941,9 @@ input.submenu-toggler:checked + .row .submenu {
 }
 
 .left-sidebar {
-  width: 280px;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  min-width: 280px;
   max-width: 280px;
   z-index: 100;
   box-shadow: 10px 0px 15px rgba(152, 151, 175, 0.1);
@@ -10847,7 +10966,8 @@ label.menu-toggle {
 }
 
 #left-sidebar-toggle:checked + .left-sidebar {
-  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
 }
 
 #left-sidebar-toggle:checked + .left-sidebar .menu-toggle .icon-toggle-menu {
@@ -10866,13 +10986,17 @@ label.menu-toggle {
   padding: 0;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .menu-items .menu-item-name {
-  display: none;
+#left-sidebar-toggle:checked + .left-sidebar .menu-items > .col {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  max-height: 528px;
 }
 
-#left-sidebar-toggle:checked + .left-sidebar .menu-items .icon-expand-collapse {
-  position: absolute;
-  right: -30px;
+#left-sidebar-toggle:checked + .left-sidebar .menu-items .menu-item-name {
+  display: none;
 }
 
 #left-sidebar-toggle:checked + .left-sidebar .help__text-content {
@@ -10915,7 +11039,7 @@ label.menu-toggle {
 }
 
 .grid__toolbar {
-  margin-top: 21px;
+  margin: 21px 0;
   padding: 0 20px;
 }
 
@@ -10949,9 +11073,60 @@ label.menu-toggle {
   margin-right: 15px;
 }
 
+.pagination button {
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  color: #3F3F57;
+  text-align: center;
+}
+
+.pagination button.page {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 29px;
+}
+
+.pagination button.page.page--current {
+  border: 1px solid #E2E5EE;
+}
+
+.pagination button.page.page--next {
+  width: 76px;
+  padding: 0 24px 0 12px;
+  border: 1px solid #E2E5EE;
+  border-radius: 4px;
+}
+
+.pagination button.page.page--next .icon {
+  position: absolute;
+  top: 6px;
+  right: 21px;
+  width: 14px;
+  height: 14px;
+}
+
+.workzone {
+  height: calc(100vh - 80px);
+}
+
+.workzone > .col {
+  height: 100%;
+}
+
+.workzone > .col > .row:first-child {
+  height: 100%;
+}
+
+.grid > .col {
+  height: 100%;
+}
+
 .grid__container {
+  height: calc(100% - 100px - 30px);
   padding: 0;
-  margin: 60px;
+  margin: 30px 30px 0 30px;
   background-color: #F9F9FB;
   box-shadow: 0px 10px 15px rgba(152, 151, 175, 0.1);
   border-radius: 4px;
@@ -10963,7 +11138,7 @@ label.menu-toggle {
   font-size: 24px;
 }
 
-.grid__rows .grid__cell .row-checkbox {
+.grid__select-all-checkbox {
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -10985,7 +11160,7 @@ label.menu-toggle {
   /* Style the checkmark/indicator */
 }
 
-.grid__rows .grid__cell .row-checkbox input {
+.grid__select-all-checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -10993,7 +11168,75 @@ label.menu-toggle {
   width: 0;
 }
 
-.grid__rows .grid__cell .row-checkbox .checkmark {
+.grid__select-all-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  border: 2px solid #FFF;
+  border-radius: 2px;
+}
+
+.grid__select-all-checkbox input:checked ~ .checkmark {
+  background-color: #FFF;
+  border: 2px solid #FFF;
+  border-radius: 2px;
+}
+
+.grid__select-all-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.grid__select-all-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.grid__select-all-checkbox .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: 2px solid #689CD3;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.grid__select-row-checkbox {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  position: relative;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a blue background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+
+.grid__select-row-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.grid__select-row-checkbox .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -11004,23 +11247,23 @@ label.menu-toggle {
   border-radius: 2px;
 }
 
-.grid__rows .grid__cell .row-checkbox input:checked ~ .checkmark {
+.grid__select-row-checkbox input:checked ~ .checkmark {
   background-color: #3077C2;
   border: 2px solid #3077C2;
   border-radius: 2px;
 }
 
-.grid__rows .grid__cell .row-checkbox .checkmark:after {
+.grid__select-row-checkbox .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.grid__rows .grid__cell .row-checkbox input:checked ~ .checkmark:after {
+.grid__select-row-checkbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-.grid__rows .grid__cell .row-checkbox .checkmark:after {
+.grid__select-row-checkbox .checkmark:after {
   left: 4px;
   top: 0px;
   width: 5px;
@@ -11031,12 +11274,53 @@ label.menu-toggle {
   transform: rotate(45deg);
 }
 
+.grid__header {
+  height: 60px;
+  background-color: #689CD3;
+  color: #FFF;
+  text-align: center;
+  line-height: 16px;
+}
+
+.grid__header th {
+  padding: 0 8px;
+}
+
+.grid__header th:first-child {
+  width: 60px;
+}
+
+.grid__header th .col:first-child {
+  margin-left: 12px;
+}
+
+.grid__header__sort {
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.grid__data-row {
+  height: 49px;
+}
+
+.grid__data-row--selected td {
+  background-color: #F2F5F9;
+}
+
+.grid__data-row__actions {
+  padding: 0 8px;
+}
+
 .grid table {
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 80px;
   width: 100%;
   font-size: 12px;
+}
+
+.grid table tbody {
+  overflow-y: scroll;
 }
 
 .grid table tr:nth-child(2n + 3) {
@@ -11049,167 +11333,6 @@ label.menu-toggle {
 
 .grid table tr:nth-child(n + 2):not(:last-child) {
   border-bottom: 1px solid #E2E5EE;
-}
-
-.grid table tr.grid__header {
-  height: 60px;
-  background-color: #689CD3;
-  color: #FFF;
-  text-align: center;
-  line-height: 16px;
-}
-
-.grid table tr.grid__header th .grid__sort {
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-.grid table tr.grid__header th:first-child {
-  width: 60px;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  position: relative;
-  height: 16px;
-  width: 16px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Hide the browser's default checkbox */
-  /* Create a custom checkbox */
-  /* When the checkbox is checked, add a blue background */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: transparent;
-  border: 2px solid #FFF;
-  border-radius: 2px;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox input:checked ~ .checkmark {
-  background-color: #FFF;
-  border: 2px solid #FFF;
-  border-radius: 2px;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.grid table tr.grid__header .grid__select-all-checkbox .checkmark:after {
-  left: 4px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
-  border: 2px solid #689CD3;
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.grid table tr.grid__data-row {
-  height: 49px;
-}
-
-.grid table tr.grid__data-row.grid__data-row--selected td {
-  background-color: #F2F5F9;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  position: relative;
-  height: 16px;
-  width: 16px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /* Hide the browser's default checkbox */
-  /* Create a custom checkbox */
-  /* When the checkbox is checked, add a blue background */
-  /* Create the checkmark/indicator (hidden when not checked) */
-  /* Show the checkmark when checked */
-  /* Style the checkmark/indicator */
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 16px;
-  width: 16px;
-  background-color: transparent;
-  border: 2px solid #9097AD;
-  border-radius: 2px;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox input:checked ~ .checkmark {
-  background-color: #3077C2;
-  border: 2px solid #3077C2;
-  border-radius: 2px;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.grid table tr.grid__data-row td .grid__select-row-checkbox .checkmark:after {
-  left: 4px;
-  top: 0px;
-  width: 5px;
-  height: 10px;
-  border: 2px solid #FFF;
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
 }
 
 .grid table tr td {

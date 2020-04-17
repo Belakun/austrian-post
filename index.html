@@ -61,17 +61,17 @@
                 </div>
 
                 <input type="checkbox" class="submenu-toggler" id="toggle-shipping-submenu">
-                <div class="row">
+                <div class="row menu-item__expandable  align-content-center">
                   <div class="col">
-                    <div class="row menu-item  align-content-center">
+                    <div class="row menu-item align-content-center">
                       <div class="col">
                         <label class="submenu-toggle" for="toggle-shipping-submenu">
-                          <div class="row align-content-center">
+                          <div class="row">
                             <div class="col-2">
                               <i class="icon icon-box"></i>
                             </div>
                             <div class="col menu-item-name">Shipping</div>
-                            <div class="col-2">
+                            <div class="col-auto menu-item__icon">
                               <i class="icon icon-expand-collapse"></i>
                             </div>
                           </div>
@@ -117,6 +117,7 @@
                     </div>
                   </div>
                 </div>
+
 
 
 
@@ -221,7 +222,7 @@
 
 
 
-      <div class="col">
+      <div class="col main">
         <div class="row align-items-center top-navigation">
           <div class="col mr-auto search">
             <div class="row">
@@ -283,10 +284,10 @@
 
           </div>
         </div>
-        <div class="row">
+        <div class="row workzone">
           <div class="col">
             <div class="row">
-              <div class="col grid__container">
+              <div class="col d-flex flex-column grid__container">
                 <div class="row no-gutters justify-content-start breadcrumbs">
                   <div class="col-auto breadcrumbs__level-0">Shipping</div>
                   <div class="col-auto breadcrumbs__divider">></div>
@@ -349,558 +350,540 @@
                 </div>
 
                 <!-- GRID -->
-                <div class="row">
-                  <div class="col grid">
+                <div class="row grid">
+                  <div class="col">
 
                     <table>
-                      <tr class="grid__header">
-                        <th>
-                              <label class="grid__select-all-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                              </label>
-                        </th>
-                        <th>
-                          System Reference
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Type</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                      <thead>
+                        <tr class="grid__header">
+                          <th>
+                            <label class="grid__select-all-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </th>
+                          <th>
+                            System Reference
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col">Type</div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Sender Company</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col"><span>Sender Company</span></div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Postcode Receiver</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col">Postcode Receiver</div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Country Receiver</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col">Country Receiver</div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center  flex-nowrap">
-                            <div class="col-auto">Reference</div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Status</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                          </th>
+                          <th>
+                            Reference
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col">Status</div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center  flex-nowrap">
-                            <div class="col-auto">Barcode</div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center no-gutters flex-nowrap">
-                            <div class="col-auto">Creation Date</div>
-                            <div class="col grid__sort">
-                              <i class="icon icon-elevator-button"></i>
+                          </th>
+                          <th>
+                            Barcode
+                          </th>
+                          <th>
+                            <div class="row align-items-center no-gutters flex-nowrap">
+                              <div class="col">Creation Date</div>
+                              <div class="col grid__sort">
+                                <i class="icon icon-elevator-button"></i>
+                              </div>
                             </div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center  flex-nowrap">
-                            <div class="col-auto">Carrier Code</div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center  flex-nowrap">
-                            <div class="col-auto">Tickets</div>
-                          </div>
-                        </th>
-                        <th>
-                          <div class="row align-items-center  flex-nowrap">
-                            <div class="col-auto">Actions</div>
-                          </div>
-                        </th>
-                      </tr>
+                          </th>
+                          <th>
+                            Carrier Code
+                          </th>
+                          <th>
+                            Tickets
+                          </th>
+                          <th>
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
 
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row grid__data-row--selected">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row  grid__data-row--selected">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
-                      <tr class="grid__data-row">
-                        <td>
-                          <label class="grid__select-row-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                        </td>
-                        <td>
-                          1748936043
-                        </td>
-                        <td>
-                          Delivery
-                        </td>
-                        <td>
-                          Antratek Electronics
-                        </td>
-                        <td>
-                          1071CD
-                        </td>
-                        <td>
-                          Netherlands
-                        </td>
-                        <td>
-                          ORD00168
-                        </td>
-                        <td>
-                          Registered
-                        </td>
-                        <td>
-                          <a href="">10331230417</a>
-                          <br>
-                          <a href="">17610150718</a>
-                        </td>
-                        <td>
-                          07-01-2020
-                        </td>
-                        <td>
-                          dpd_germany
-                        </td>
-                        <td></td>
-                        <td>actions</td>
-                      </tr>
+
+                      <tbody>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>
+                            <div class="row grid__data-row__actions no-gutters">
+                              <div class="col d-flex flex-row">
+                                <i class="icon icon-eye"></i>
+                                <i class="icon icon-pen"></i>
+                                <i class="icon icon-archive"></i>
+                                <i class="icon icon-delete"></i>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr class="grid__data-row grid__data-row--selected">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row  grid__data-row--selected">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox" checked="checked">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                        <tr class="grid__data-row">
+                          <td>
+                            <label class="grid__select-row-checkbox">
+                              <input type="checkbox">
+                              <span class="checkmark"></span>
+                            </label>
+                          </td>
+                          <td>
+                            1748936043
+                          </td>
+                          <td>
+                            Delivery
+                          </td>
+                          <td>
+                            Antratek Electronics
+                          </td>
+                          <td>
+                            1071CD
+                          </td>
+                          <td>
+                            Netherlands
+                          </td>
+                          <td>
+                            ORD00168
+                          </td>
+                          <td>
+                            Registered
+                          </td>
+                          <td>
+                            <a href="">10331230417</a>
+                            <br>
+                            <a href="">17610150718</a>
+                          </td>
+                          <td>
+                            07-01-2020
+                          </td>
+                          <td>
+                            dpd_germany
+                          </td>
+                          <td></td>
+                          <td>actions</td>
+                        </tr>
+                      </tbody>
+
                     </table>
+
+                  </div>
+                </div>
+                <div class="row mt-auto align-items-center pagination">
+                  <div class="col-auto mr-auto">
+                    <div class="row">
+                      <div class="col">Display</div>
+                      <div class="col"></div>
+                      <div class="col">Shippings</div>
+                    </div>
+                  </div>
+                  <div class="col-auto ml-auto">
+                    <button class="page page--current">1</button>
+                    <button class="page">2</button>
+                    <button class="page">3</button>
+                    <button class="page">4</button>
+                    <span>...</span>
+                    <button class="page">32</button>
+                    <button class="page page--next">Next <i class="icon icon-gt-grey"></i></button>
 
                   </div>
                 </div>
@@ -908,7 +891,6 @@
 
               </div>
             </div>
-            <div class="row">pagination</div>
           </div>
 
         </div>

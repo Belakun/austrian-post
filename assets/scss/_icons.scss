@@ -61,6 +61,34 @@ i.icon {
     background-position: 15*$shift 0;
   }
 
+  &.icon-gt-grey {
+    background-position: 17*$shift 0;
+  }
+
+  &.icon-eye {
+    background-position: 19*$shift 0;
+  }
+
+  &.icon-eye-disabled {
+    background-position: 19*$shift $shift;
+  }
+
+  &.icon-pen {
+    background-position: 20*$shift 0;
+  }
+
+  &.icon-pen-disabled {
+    background-position: 20*$shift $shift;
+  }
+
+  &.icon-archive {
+    background-position: 21*$shift 0;
+  }
+
+  &.icon-delete {
+    background-position: 22*$shift 0;
+  }
+
   &.icon-dropdown {
     background-position: 11*$shift $shift;
   }

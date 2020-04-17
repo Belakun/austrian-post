@@ -1,8 +1,10 @@
 @import "menu";
 @import "help";
+@import "variables";
 
 .left-sidebar {
-  width: 280px;
+  flex-grow: 0;
+  min-width: 280px;
   max-width: 280px;
   z-index: 100;
   box-shadow: 10px 0px 15px rgba(152, 151, 175, 0.1);
@@ -23,8 +25,8 @@ label.menu-toggle {
 
   &:checked {
     & + .left-sidebar {
-      //narrow menu here
-      width: 80px;
+      min-width: 80px;
+      max-width: 80px;
 
       & .menu-toggle {
         & .icon-toggle-menu {
@@ -45,13 +47,14 @@ label.menu-toggle {
       }
 
       & .menu-items {
-        & .menu-item-name {
-          display: none;
+        & > .col {
+          display: flex;
+          flex-direction: column;
+          max-height: $menu-item-height * $menu-items-count;
         }
 
-        & .icon-expand-collapse {
-          position: absolute;
-          right: -30px;
+        & .menu-item-name {
+          display: none;
         }
       }
 

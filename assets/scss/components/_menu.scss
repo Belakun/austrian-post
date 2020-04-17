@@ -2,9 +2,6 @@
 @import "../variables";
 @import "submenu";
 
-$menu-item-height: 48px;
-
-
 .menu-header {
   height: $nav-bar-height;
   background-color: $main-yellow;
@@ -25,6 +22,7 @@ $menu-item-height: 48px;
 
 .row.menu-item {
   height: $menu-item-height;
+  max-height: $menu-item-height;
   padding-left: 24px;
   color: $main-grey;
   cursor: pointer;
@@ -60,7 +58,7 @@ $menu-item-height: 48px;
     display: flex;
     flex-direction: column;
     margin-bottom: 0;
-    height: $menu-item-height;
+    // height: $menu-item-height;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -69,6 +67,29 @@ $menu-item-height: 48px;
 
     & > .row {
       height: 100%;
+    }
+  }
+}
+
+.menu-item__expandable {
+  & .menu-item {
+    &  > .col {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      & .submenu-toggle {
+        flex-grow: 1;
+
+        & .row {
+          flex-grow: 1;
+          align-items: center;
+
+          & .menu-item__icon {
+            margin-right: 8px;
+          }
+        }
+      }
     }
   }
 }
@@ -88,7 +109,7 @@ input.submenu-toggler {
 
 // submenu expanded
 input.submenu-toggler:checked {
-  & + .row {
+  & + .menu-item__expandable {
     color: $main-black;
     background-color: $main-yellow;
 
@@ -111,15 +132,58 @@ input.submenu-toggler:checked {
     & .menu-items {
       overflow-y: visible;
 
-      & .menu-item:hover {
-        & i.icon.icon-expand-collapse {
-          background-position: 16*$shift $shift;
+      & > .col {
+        & > .menu-item {
+          height: auto;
+          flex-grow: 1;
+
+          &:hover {
+            & i.icon.icon-expand-collapse {
+              background-position: 16*$shift $shift;
+            }
+          }
+
+          & i.icon.icon-expand-collapse {
+            background-position: 16*$shift 0;
+          }
         }
 
-      }
+        & > .menu-item__expandable {
+          flex-grow: 1;
+          align-content: center;
+          max-height: $menu-item-height;
+          flex-direction: column;
 
-      & i.icon.icon-expand-collapse {
-        background-position: 16*$shift 0;
+          & > .col {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+          }
+
+          & .menu-item {
+            height: auto;
+            flex-grow: 1;
+
+            &:hover {
+              flex-grow:  1;
+              align-content:  center;
+
+              & i.icon.icon-expand-collapse {
+                background-position: 16*$shift $shift;
+              }
+            }
+          }
+
+          & .menu-item__icon {
+            margin-left: 8px;
+            width: 20px;
+            flex-grow: 0;
+
+            & i.icon.icon-expand-collapse {
+              background-position: 16*$shift 0;
+            }
+          }
+        }
       }
     }
 
@@ -129,27 +193,38 @@ input.submenu-toggler:checked {
 
     & .submenu-toggler:checked {
 
-      & + .row {
+      & + .menu-item__expandable {
         width: 360px;
 
         & .menu-item {
-
+          height: 48px;
 
           & .menu-item-name {
             display: initial;
           }
+
+          & .menu-item__icon {
+            margin-right: 12px;
+            width: 20px;
+            flex-grow: 0;
+
+            & i.icon.icon-expand-collapse {
+              background-position: 18*$shift $shift !important;
+            }
+          }
         }
 
 
-        & i.icon.icon-expand-collapse {
-          background-position: 18*$shift $shift;
-          right: 15px;
-        }
+        // & i.icon.icon-expand-collapse {
+        //   background-position: 18*$shift $shift !important;
+        //   // right: 15px;
+        // }
 
 
         & .submenu {
-          position: absolute;
-          left: 95px;
+          // position: absolute;
+          // left: 95px;
+          margin-left: auto;
           width: 280px;
 
 
