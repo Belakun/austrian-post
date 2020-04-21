@@ -3,7 +3,6 @@
 @import "grid-toolbar";
 @import "pagination";
 
-$grid-margin: 30px;
 .main {
 
 }
@@ -30,9 +29,9 @@ $grid-margin: 30px;
   }
 
   &__container {
-    height: calc(100% - #{$help-section-height} - #{$grid-margin});
+    // height: calc(100% - #{$help-section-height} - #{$content-area-space-around});
     padding: 0;
-    margin: $grid-margin $grid-margin 0 $grid-margin;
+    margin: $content-area-space-around $content-area-space-around 0 $content-area-space-around;
     background-color: $main-white-gray;
     box-shadow: 0px 10px 15px rgba(152, 151, 175, 0.1);
     border-radius: 4px;
@@ -71,11 +70,11 @@ $grid-margin: 30px;
         margin-left: 12px;
       }
     }
+  }
 
-    &__sort {
-      margin-left: 4px;
-      cursor: pointer;
-    }
+  &__sort {
+    margin-left: 4px;
+    cursor: pointer;
   }
 
   &__data-row {

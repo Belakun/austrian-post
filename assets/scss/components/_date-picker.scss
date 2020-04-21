@@ -5,8 +5,9 @@
 
 
   & input {
-    width: 208px;
     @include input();
+    width: 188px;
+    padding: 0 0 0 12px;
   }
 
   & .grid__toolbar__button {

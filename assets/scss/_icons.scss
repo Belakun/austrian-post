@@ -61,8 +61,11 @@ i.icon {
     background-position: 15*$shift 0;
   }
 
-  &.icon-gt-grey {
-    background-position: 17*$shift 0;
+  &.icon-gt-small {
+    width: 14px;
+    height: 14px;
+    background-image: url(/assets/img/gt-14x14.svg);
+    background-position: center;
   }
 
   &.icon-eye {

@@ -2,48 +2,77 @@
 @import "../variables";
 
 .pagination {
-  button {
-    border: none;
-    background-color: transparent;
-    font-size: 12px;
-    color: $main-dark-grey;
-    text-align: center;
+  height: 32px;
+  padding: 0;
+  margin: 24px $content-area-space-around;
+  margin-top: 24px;
+  color: $main-dark-grey;
+  font-size: 12px;
 
-    &.page {
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
+  &__items-per-page {
+    & > .col {
+      margin-right: 12px;
+    }
 
-      line-height: 29px;
+    .select-wrapper {
+      padding: 0 12px 0 8px;
+      border: 1px solid $main-lightest-grey;
+      border-radius: 4px;
 
-      &.page--current {
-        border: 1px solid $main-lightest-grey;
-      }
+      & select {
+        height: 30px;
+        width: 40px;
+        background-color: transparent;
+        border: none;
 
-      &.page--next {
-        width: 76px;
-        padding: 0 24px 0 12px;
-        border: 1px solid $main-lightest-grey;
-        border-radius: 4px;
-
-        // &:after {
-        //   content:"";
-        //   display: block;
-        //   width: 14px;
-        //   height: 14px;
-        //   background-image: url(/assets/img/sprite.svg);
-        //   background-position: 320px 20px;
-        // }
-
-        & .icon {
-          position: absolute;
-          top: 6px;
-          right: 21px;
-          width: 14px;
-          height: 14px;
+        & option {
+          margin-left: 18px;
         }
       }
     }
 
+
   }
+
+  & .row {
+    flex-grow: 1;
+
+    & button {
+      border: none;
+      background-color: transparent;
+      text-align: center;
+
+
+      &.page {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+
+        line-height: 29px;
+
+        &.page--current {
+          border: 1px solid $main-lightest-grey;
+        }
+
+        &.page--next {
+          position: relative;
+          width: 76px;
+          padding: 0 24px 0 12px;
+          border: 1px solid $main-lightest-grey;
+          border-radius: 4px;
+
+          & .icon {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+
+    }
+  }
+
+
 }

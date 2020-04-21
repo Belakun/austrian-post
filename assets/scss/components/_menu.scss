@@ -9,6 +9,16 @@
   & .row {
     height: $nav-bar-height;
   }
+
+  &:after {
+    content: "";
+    right: -20px;
+    position: absolute;
+    height: $nav-bar-height;
+    width: 20px;
+    background-color: $main-yellow;
+
+  }
 }
 
 .menu-items {
@@ -23,7 +33,7 @@
 .row.menu-item {
   height: $menu-item-height;
   max-height: $menu-item-height;
-  padding-left: 24px;
+  padding-left: 28px;
   color: $main-grey;
   cursor: pointer;
 
@@ -86,7 +96,7 @@
           align-items: center;
 
           & .menu-item__icon {
-            margin-right: 8px;
+            margin-right: 4px;
           }
         }
       }
