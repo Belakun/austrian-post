@@ -19,7 +19,7 @@
 
   <body class="container-fluid d-flex h-100">
     <div class="row flex-grow-1 flex-nowrap">
-      <input type="checkbox" class="menu-toggler" id="left-sidebar-toggle">
+      <input type="checkbox" class="menu-toggler" id="left-sidebar-toggle" checked="checked">
       <div class="col d-flex flex-column left-sidebar">
 
 
@@ -53,7 +53,7 @@
                 <input type="checkbox" class="submenu-toggler" id="menu-1">
                 <div class="row menu-item__expandable  align-content-center">
                   <div class="col">
-                    <div class="row menu-item align-content-center">
+                    <div class="row menu-item menu-item--selected align-content-center">
                       <div class="col">
                         <label class="submenu-toggle" for="menu-1">
                           <div class="row">
@@ -83,11 +83,6 @@
                     </div>
                   </div>
                 </div>
-
-
-
-
-
 
                 <input type="checkbox" class="submenu-toggler" id="toggle-shipping-submenu">
                 <div class="row menu-item__expandable  align-content-center">
@@ -146,8 +141,6 @@
                     </div>
                   </div>
                 </div>
-
-
 
                 <input type="checkbox" class="submenu-toggler" id="menu-2">
                 <div class="row menu-item__expandable  align-content-center">
@@ -251,8 +244,6 @@
                   </div>
                 </div>
 
-
-
                 <input type="checkbox" class="submenu-toggler" id="menu-5">
                 <div class="row menu-item__expandable  align-content-center">
                   <div class="col">
@@ -287,7 +278,6 @@
                   </div>
                 </div>
 
-
                 <input type="checkbox" class="submenu-toggler" id="menu-6">
                 <div class="row menu-item__expandable  align-content-center">
                   <div class="col">
@@ -321,7 +311,6 @@
                     </div>
                   </div>
                 </div>
-
 
                 <input type="checkbox" class="submenu-toggler" id="menu-7">
                 <div class="row menu-item__expandable  align-content-center">
@@ -418,19 +407,213 @@
           </div>
           <div class="col-auto ml-auto top-navigation__toolbar">
             <div class="row align-items-center">
-              <div class="col">
+
+              <div class="col masquarading">
                 <i class="icon icon-man-in-hat"></i>
+
+                <div class="row no-gutters context-menu">
+                  <div class="col">
+                    <div class="row flex-nowrap flex-column no-gutters context-menu__header">
+                      <div class="col">Masquarading as:</div>
+                      <div class="col masquarading__search">
+                        <input type="text">
+                      </div>
+                      <div class="col masquarading__history">
+                        <div class="row">
+                          <div class="col">Previous Entering</div>
+                          <div class="col-auto ml-auto">
+                            <button class="masquarading__history__clear-all">Clear All</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row flex-nowrap flex-column context-menu__item masquarading__search-result">
+                      <div class="col">
+                        Jono Toys BV <a href = "mailto: miriam@jonotoys.nl">miriam@jonotoys.nl</a>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap flex-column context-menu__item">
+                      <div class="col">
+                        Jovako Nijmegen  <a href = "mailto: grovako@kpnmail.nl">grovako@kpnmail.nl</a>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap flex-column context-menu__item">
+                      <div class="col">
+                        Jovako Nijmegen  <a href = "mailto: grovako@kpnmail.nl">grovako@kpnmail.nl</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col">
+
+              <div class="col settings">
                 <i class="icon icon-gear"></i>
+
+                <div class="row no-gutters context-menu">
+                  <div class="col">
+                    <div class="row flex-nowrap no-gutters context-menu__header">
+                      <div class="col">Settings</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-wrench"></i>
+                      </div>
+                      <div class="col-auto">Manage system properties</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-desktop"></i>
+                      </div>
+                      <div class="col">DPD Logs</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-cycle"></i>
+                      </div>
+                      <div class="col">Cron</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-job-list"></i>
+                      </div>
+                      <div class="col">Jobs queue</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-control-camera"></i>
+                      </div>
+                      <div class="col">Imported Batches</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-currency-euro"></i>
+                      </div>
+                      <div class="col">Imported Prices</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="col">
+
+              <div class="col notifications notifications--has-new">
                 <i class="icon icon-notify"></i>
+
+                <div class="row no-gutters context-menu">
+                  <div class="col">
+                    <div class="row flex-nowrap no-gutters context-menu__header">
+                      <div class="col">Notifications</div>
+                      <div class="col-auto ml-auto">
+                        <button class="notifications__clear-all">Clear All</button>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-no-avatar"></i>
+                      </div>
+                      <div class="col notifications__message">
+                        <div class="row">
+                          <div class="col">
+                            <a href="">Ketty Shimmer</a><span>&nbspcommented on&nbsp</span><a href="">Shipping</a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <span class="notifications__time-passed">1 min ago</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <img src="/assets/img/avatar.png" alt="">
+                      </div>
+                      <div class="col notifications__message">
+                        <div class="row">
+                          <div class="col">
+                            <a href="">Charlotte Zimmermann</a><span>&nbspcommented on&nbsp</span><a href="">Carrier</a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <span class="notifications__time-passed">1 hour ago</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-shipment-delivered"></i>
+                      </div>
+                      <div class="col notifications__message">
+                        <div class="row">
+                          <div class="col">
+                            Shipping<a href="">&nbsp;#1748936043&nbsp;</a>status has changed to&nbsp;<span class="bold">Delivered</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <span class="notifications__time-passed">1 hour ago</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-shipment-non-delivered"></i>
+                      </div>
+                      <div class="col notifications__message">
+                        <div class="row">
+                          <div class="col">
+                            Shipping<a href="">&nbsp;#1748936043&nbsp;</a>status has changed to&nbsp;<span class="bold">Non Delivered</span>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <span class="notifications__time-passed">1 hour ago</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <img src="/assets/img/avatar.png" alt="">
+                      </div>
+                      <div class="col notifications__message">
+                        <div class="row">
+                          <div class="col">
+                            <a href="">Charlotte Zimmermann&nbsp;</a> tagged you on<a href="">&nbsp;Shipping</a>
+                          </div>
+
+                        </div>
+                        <div class="row notifications__comment-text">
+                          <div class="col">
+                            Hey, <span class="tagged-user-name">@Markus</span>, we have some issues with shipping<a href="">&nbsp;#1748936043&nbsp;</a> can you check this pls?
+                          </div>
+                        </div>
+                        <div class="row notifications__time-passed">
+                          <div class="col-auto"><span>3 hours ago</span></div>
+                          <div class="col-auto"><button>Reply</button></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row flex-nowrap justify-content-center context-menu__item notifications__footer">
+                      <div class="col">
+                        View all notifications
+                      </div>
+                    </div>
+
+
+
+                  </div>
+                </div>
               </div>
+
               <div class="col-auto language-picker">
                 <div class="row  no-gutters">
                   <div class="col-auto language-picker__flag">
-                    <img src="assets/img/us-flag.png" alt="">
+                    <i class="icon icon-flag-us"></i>
                   </div>
                   <div class="col-auto language-picker__lang">
                     <span>Eng</span>
@@ -439,7 +622,28 @@
                     <i class="icon icon-dropdown"></i>
                   </div>
                 </div>
+
+                <div class="row no-gutters context-menu">
+                  <div class="col">
+                    <div class="row no-gutters context-menu__header">
+                      <div class="col">Languages</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-flag-de"></i>
+                      </div>
+                      <div class="col">German</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-flag-nl"></i>
+                      </div>
+                      <div class="col">Dutch</div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
               <div class="col-auto user-profile">
                 <div class="row no-gutters align-items-center">
                   <div class="col user-profile__avatar">
@@ -451,6 +655,38 @@
                     </div>
                     <div class="row">
                       <div class="col user-profile__position">Manager</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row no-gutters context-menu">
+                  <div class="col">
+                    <div class="row flex-nowrap no-gutters context-menu__header">
+                      <div class="col">Profile</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-person-2"></i>
+                      </div>
+                      <div class="col">My Account</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-cogwheel"></i>
+                      </div>
+                      <div class="col">Settings</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-msg"></i>
+                      </div>
+                      <div class="col">Support</div>
+                    </div>
+                    <div class="row flex-nowrap context-menu__item">
+                      <div class="col-auto">
+                        <i class="icon icon-logout"></i>
+                      </div>
+                      <div class="col">Logout</div>
                     </div>
                   </div>
                 </div>

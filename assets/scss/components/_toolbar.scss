@@ -1,25 +1,150 @@
 @import "../colors";
+@import "../variables";
+
+$notification-hover-color: #F2F5F9;
 
 .top-navigation__toolbar {
   margin-right: 15px;
-  // > .row > .col {
-  //   padding-right: 10px;
-  //   padding-left: 10px;
-  // }
+  height: $nav-bar-height;
+  color: $main-grey;
 
-  // > .row > .col-auto {
-  //   padding-right: 10px;
-  //   padding-left: 10px;
-  // }
+  & > .row {
+    height: $nav-bar-height;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      height: $nav-bar-height;
+      cursor: pointer;
+
+
+    }
+  }
 }
 
+.masquarading {
+  & .context-menu {
+    left: 8px;
+    width: 320px;
+  }
+
+  &__search {
+    & input {
+      @include input();
+      margin-top: 12px;
+      height: 40px;
+      border: 1px solid $main-lightest-grey;
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;
+
+      &:focus {
+        border: 1px solid $main-blue;
+      }
+    }
+
+  }
+
+  &__history {
+    margin-top: 12px;
+
+    &__clear-all {
+      padding-right: 0;
+      color: $main-pale-grey;
+    }
+  }
+
+
+}
+
+.settings {
+  left: 8px;
+  & .context-menu {
+    left: 8px;
+    width: 280px;
+  }
+
+}
+
+.notifications {
+  & .icon {
+    position: relative;
+  }
+
+  &--has-new {
+    & .icon-notify {
+      &:after {
+        content: "";
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: -6px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $main-blue;
+      }
+    }
+  }
+
+  &__clear-all {
+    color: $main-pale-grey;
+  }
+
+  &__time-passed {
+    font-size: 12px;
+    color: $main-light-grey;
+  }
+
+  &__comment-text {
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: $main-dark-grey;
+  }
+
+  &__footer {
+    height: 40px;
+    background-color: $notification-hover-color;
+    color: #{$main-blue}B3;
+    font-weight: 600;
+    cursor: pointer;
+
+    & .col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  & .context-menu {
+    width: 380px;
+    left: 6px;
+
+    &__item {
+
+      &:hover {
+        // color: $main-grey !important;
+      }
+    }
+  }
+}
+
+.language-picker, .user-profile {
+  &:hover {
+    color: $main-dark-grey;
+  }
+}
+
+.language-picker {
+  &:hover {
+
+    & .icon.icon-dropdown {
+      background-position: -220px -40px;
+    }
+  }
+}
 
 .language-picker__flag {
   margin-right: 10px;
-}
-
-.language-picker__lang {
-  color: $main-grey;
 }
 
 .user-profile__avatar {
@@ -27,11 +152,60 @@
 }
 
 .user-profile__name {
-  color: $main-grey;
   font-weight: 500;
 }
 
 .user-profile__position {
-  color: $main-grey;
   font-size: 12px;
+}
+
+.masquarading, .settings, .notifications, .user-profile, .language-picker {
+  &:hover {
+    & .context-menu {
+      display: initial;
+    }
+  }
+}
+
+
+// context menues
+.context-menu {
+  display: none;
+  position: absolute;
+  top: $nav-bar-height;
+  box-shadow: 0px 0px 10px rgba(152, 151, 175, 0.3);
+  background-color: white;
+  z-index: 1;
+  padding: 0;
+  cursor: default;
+
+  @include triangle-up($main-white-gray, 10px);
+
+  &__header {
+    padding: 11px 20px;
+    background-color: $main-white-gray;
+    border-bottom: 1px solid $main-another-gray;
+    font-weight: 600;
+  }
+
+  &__item {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 9px 0;
+    // cursor: pointer;
+
+    & > div:first-child {
+      padding-right: 0;
+
+    }
+
+    &:hover {
+      color: $main-blue;
+      background-color: $notification-hover-color;
+    }
+
+    & .icon {
+      // margin-right: 15px;
+    }
+  }
 }

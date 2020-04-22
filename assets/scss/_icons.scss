@@ -92,9 +92,58 @@ i.icon {
     background-position: 22*$shift 0;
   }
 
+  &.icon-cogwheel {
+    background-position: 23*$shift 0;
+  }
+
+  &.icon-person-2 {
+    background-position: 24*$shift 0;
+  }
+
+  &.icon-msg {
+    background-position: 25*$shift 0;
+  }
+
+  &.icon-logout {
+    background-position: 26*$shift 0;
+  }
+
+  &.icon-flag-us {
+    background-position: 27*$shift 2*$shift;
+  }
+
+  &.icon-flag-de {
+    background-position: 27*$shift 0*$shift;
+  }
+
+  &.icon-flag-nl {
+    background-position: 27*$shift 1*$shift;
+  }
+
+  &.icon-wrench {
+    background-position: 28*$shift 0;
+  }
+  &.icon-desktop {
+    background-position: 29*$shift 0;
+  }
+  &.icon-cycle {
+    background-position: 30*$shift 0;
+  }
+  &.icon-job-list {
+    background-position: 31*$shift 0;
+  }
+  &.icon-control-camera {
+    background-position: 32*$shift 0;
+  }
+  &.icon-currency-euro {
+    background-position: 33*$shift 0;
+  }
+
   &.icon-dropdown {
     background-position: 11*$shift $shift;
   }
+
+
 
   &.icon-refresh {
     background-position: 0 2*$shift;
@@ -148,15 +197,60 @@ i.icon {
     background-image: url(/assets/img/fat-dash.svg);
     background-position: center;
   }
+
 }
+
+
+// NOTIFICATION CENTER ICONS
+.notifications {
+  & img {
+    width: 36px;
+    height: 36px;
+  }
+  & .icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(/assets/img/no-avatar.svg);
+    background-repeat: no-repeat;
+
+    &.icon-no-avatar {
+      background-image: url(/assets/img/no-avatar.svg);
+      background-position: center;
+      background-color: $main-blue;
+      border-radius: 50%;
+      padding: 18px;
+
+    }
+
+    &.icon-shipment-delivered {
+      width: 36px;
+      height: 36px;
+      background-image: url(/assets/img/delivered.png);
+      background-position: center;
+      background-size: contain;
+      border-radius: 50%;
+    }
+
+    &.icon-shipment-non-delivered {
+      width: 36px;
+      height: 36px;
+      background-image: url(/assets/img/non-delivered.png);
+      background-position: center;
+      background-size: contain;
+      border-radius: 50%;
+    }
+  }
+}
+
+
 
 
 
 .menu-item:hover,
 .menu-item--expanded,
 .menu-item--selected,
-.submenu-item:hover,
-.submenu-item--selected {
+.submenu-toggler:checked + .menu-item__expandable {
   & .icon {
     &.icon-phone {
       background-position: 0 $shift;
@@ -193,6 +287,13 @@ i.icon {
     &.icon-frame {
       background-position: 10*$shift $shift;
     }
+  }
+}
+
+
+.submenu-item:hover,
+.submenu-item--selected {
+  & .icon {
     &.icon-expand-collapse {
       background-position: 11*$shift $shift;
     }
@@ -217,3 +318,44 @@ i.icon {
     background-position: 17*$shift $shift;
   }
 }
+
+.context-menu__item:hover {
+  & .icon-cogwheel {
+    background-position: 23*$shift $shift;
+  }
+
+  & .icon-person-2 {
+    background-position: 24*$shift $shift;
+  }
+
+  & .icon-msg {
+    background-position: 25*$shift $shift;
+  }
+
+  & .icon-logout {
+    background-position: 26*$shift $shift;
+  }
+
+  & .icon-wrench {
+    background-position: 28*$shift $shift;
+  }
+  & .icon-desktop {
+    background-position: 29*$shift $shift;
+  }
+  & .icon-cycle {
+    background-position: 30*$shift $shift;
+  }
+  & .icon-job-list {
+    background-position: 31*$shift $shift;
+  }
+  & .icon-control-camera {
+    background-position: 32*$shift $shift;
+  }
+  & .icon-currency-euro {
+    background-position: 33*$shift $shift;
+  }
+}
+
+
+
+

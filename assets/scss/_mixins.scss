@@ -15,7 +15,7 @@
   border: none;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
-  color: $main-pale-grey;
+  color: $main-dark-grey;
 
   &::-webkit-input-placeholder {
     color: $main-pale-grey;
@@ -123,4 +123,19 @@
     font-style: normal;
     font-display: auto;
   }
+}
+
+@mixin triangle-up($color, $size) {
+  &:after {
+    content: "";
+    position: absolute;
+    top: -1 * $size;
+    left: $size;
+    width: 0;
+    height: 0;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  }
+
 }

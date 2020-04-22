@@ -4,7 +4,9 @@
 // Bootstrap and its default variables
 @import "bootstrap/bootstrap";
 
+
 // Your style
+@import "mixins";
 @import "icons";
 @import "font";
 @import "layout";
@@ -14,8 +16,12 @@
 @import "components/grid";
 @import "browser-overrides";
 
-@import "mixins";
+
 
 body {
   font-size: 14px;
+}
+
+.tagged-user-name {
+  color: $main-blue;
 }
