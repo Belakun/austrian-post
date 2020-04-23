@@ -388,23 +388,54 @@
 
       <div class="col main">
         <div class="row align-items-center top-navigation">
-          <div class="col mr-auto search">
-            <div class="row">
+
+          <div class="col mr-auto search global-search">
+            <div class="row no-gutters">
               <div class="col">
-                <div class="row no-gutters">
-                  <div class="col">
-                    <i class="icon icon-search"></i>
-                    <input type="text" name="search" placeholder="Search...">
-                  </div>
-                  <div class="col-auto search__button">
-                    <button>Search</button>
+                <i class="icon icon-search"></i>
+                <input type="text" name="search" placeholder="Search..." autocomplete="off">
+              </div>
+              <div class="col-auto search__button">
+                <button>Search</button>
+              </div>
+            </div>
+            <div class="row no-gutters context-menu">
+              <div class="col">
+                <div class="row flex-nowrap no-gutters align-items-center context-menu__header">
+                  <div class="col">Search history</div>
+                  <div class="col-auto ml-auto">
+                    <button class="global-search__clear-all">Clear All</button>
                   </div>
                 </div>
 
-
+                <div class="row flex-nowrap align-items-center context-menu__item">
+                  <div class="col">
+                    Jono Toys BV <a href = "mailto: miriam@jonotoys.nl">miriam@jonotoys.nl</a>
+                  </div>
+                  <div class="col-auto ml-auto">
+                    <i class="icon icon-multiply"></i>
+                  </div>
+                </div>
+                <div class="row flex-nowrap align-items-center context-menu__item">
+                  <div class="col">
+                    Jovako Nijmegen  <a href = "mailto: grovako@kpnmail.nl">grovako@kpnmail.nl</a>
+                  </div>
+                  <div class="col-auto ml-auto">
+                    <i class="icon icon-multiply"></i>
+                  </div>
+                </div>
+                <div class="row flex-nowrap align-items-center context-menu__item">
+                  <div class="col">
+                    Jovako Nijmegen  <a href = "mailto: grovako@kpnmail.nl">grovako@kpnmail.nl</a>
+                  </div>
+                  <div class="col-auto ml-auto">
+                    <i class="icon icon-multiply"></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col-auto ml-auto top-navigation__toolbar">
             <div class="row align-items-center">
 
@@ -413,7 +444,7 @@
 
                 <div class="row no-gutters context-menu">
                   <div class="col">
-                    <div class="row flex-nowrap flex-column no-gutters context-menu__header">
+                    <div class="row flex-nowrap flex-column no-gutters align-items-center context-menu__header">
                       <div class="col">Masquarading as:</div>
                       <div class="col masquarading__search">
                         <input type="text">
@@ -452,7 +483,7 @@
 
                 <div class="row no-gutters context-menu">
                   <div class="col">
-                    <div class="row flex-nowrap no-gutters context-menu__header">
+                    <div class="row flex-nowrap no-gutters align-items-center context-menu__header">
                       <div class="col">Settings</div>
                     </div>
                     <div class="row flex-nowrap context-menu__item">
@@ -500,7 +531,7 @@
 
                 <div class="row no-gutters context-menu">
                   <div class="col">
-                    <div class="row flex-nowrap no-gutters context-menu__header">
+                    <div class="row flex-nowrap no-gutters align-items-center context-menu__header">
                       <div class="col">Notifications</div>
                       <div class="col-auto ml-auto">
                         <button class="notifications__clear-all">Clear All</button>
@@ -625,7 +656,7 @@
 
                 <div class="row no-gutters context-menu">
                   <div class="col">
-                    <div class="row no-gutters context-menu__header">
+                    <div class="row no-gutters align-items-center context-menu__header">
                       <div class="col">Languages</div>
                     </div>
                     <div class="row flex-nowrap context-menu__item">
@@ -661,7 +692,7 @@
 
                 <div class="row no-gutters context-menu">
                   <div class="col">
-                    <div class="row flex-nowrap no-gutters context-menu__header">
+                    <div class="row flex-nowrap no-gutters align-items-center context-menu__header">
                       <div class="col">Profile</div>
                     </div>
                     <div class="row flex-nowrap context-menu__item">
@@ -717,7 +748,7 @@
                             <div class="row no-gutters">
                               <div class="col">
                                 <i class="icon icon-search"></i>
-                                <input type="text" name="search" placeholder="Search...">
+                                <input type="text" name="search" placeholder="Search..." autocomplete="off">
                               </div>
                               <div class="col-auto search__button">
                                 <button>Search</button>

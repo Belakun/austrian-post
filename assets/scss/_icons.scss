@@ -68,20 +68,14 @@ i.icon {
     background-position: center;
   }
 
+  // GRID ICONS
+
   &.icon-eye {
     background-position: 19*$shift 0;
   }
 
-  &.icon-eye-disabled {
-    background-position: 19*$shift $shift;
-  }
-
   &.icon-pen {
     background-position: 20*$shift 0;
-  }
-
-  &.icon-pen-disabled {
-    background-position: 20*$shift $shift;
   }
 
   &.icon-archive {
@@ -197,8 +191,68 @@ i.icon {
     background-image: url(/assets/img/fat-dash.svg);
     background-position: center;
   }
-
 }
+
+
+
+//GRID ROW STATES ICONS
+.grid__data-row {
+  & .icon {
+    cursor: pointer;
+
+    &:hover {
+      &.icon-eye {
+        background-position: 19*$shift 2*$shift;
+      }
+
+      &.icon-pen {
+        background-position: 20*$shift 2*$shift;
+      }
+
+      &.icon-archive {
+        background-position: 21*$shift 2*$shift;
+      }
+
+      &.icon-delete {
+        background-position: 22*$shift 2*$shift;
+      }
+    }
+  }
+
+  &--selected {
+    & .icon {
+      &.icon-eye {
+        cursor: default;
+        background-position: 19*$shift $shift !important;
+      }
+
+      &.icon-pen {
+        cursor: default;
+        background-position: 20*$shift $shift !important;
+      }
+    }
+  }
+
+  & .icon:hover {
+    &.icon-eye {
+      background-position: 19*$shift 2*$shift;
+    }
+
+    &.icon-pen {
+      background-position: 20*$shift 2*$shift;
+    }
+
+    &.icon-archive {
+      background-position: 21*$shift 2*$shift;
+    }
+
+    &.icon-delete {
+      background-position: 22*$shift 2*$shift;
+    }
+  }
+}
+
+
 
 
 // NOTIFICATION CENTER ICONS

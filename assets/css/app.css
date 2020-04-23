@@ -10263,16 +10263,8 @@ i.icon.icon-eye {
   background-position: -380px 0;
 }
 
-i.icon.icon-eye-disabled {
-  background-position: -380px -20px;
-}
-
 i.icon.icon-pen {
   background-position: -400px 0;
-}
-
-i.icon.icon-pen-disabled {
-  background-position: -400px -20px;
 }
 
 i.icon.icon-archive {
@@ -10389,6 +10381,52 @@ i.icon.icon-toggle-menu {
   height: 20px;
   background-image: url(/assets/img/fat-dash.svg);
   background-position: center;
+}
+
+.grid__data-row .icon {
+  cursor: pointer;
+}
+
+.grid__data-row .icon:hover.icon-eye {
+  background-position: -380px -40px;
+}
+
+.grid__data-row .icon:hover.icon-pen {
+  background-position: -400px -40px;
+}
+
+.grid__data-row .icon:hover.icon-archive {
+  background-position: -420px -40px;
+}
+
+.grid__data-row .icon:hover.icon-delete {
+  background-position: -440px -40px;
+}
+
+.grid__data-row--selected .icon.icon-eye {
+  cursor: default;
+  background-position: -380px -20px !important;
+}
+
+.grid__data-row--selected .icon.icon-pen {
+  cursor: default;
+  background-position: -400px -20px !important;
+}
+
+.grid__data-row .icon:hover.icon-eye {
+  background-position: -380px -40px;
+}
+
+.grid__data-row .icon:hover.icon-pen {
+  background-position: -400px -40px;
+}
+
+.grid__data-row .icon:hover.icon-archive {
+  background-position: -420px -40px;
+}
+
+.grid__data-row .icon:hover.icon-delete {
+  background-position: -440px -40px;
 }
 
 .notifications img {
@@ -10670,9 +10708,11 @@ html, body {
 }
 
 .search {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 40px;
   height: 40px;
   max-width: 426px;
-  margin-left: 40px;
   font-size: 14px;
   border: none;
 }
@@ -10681,7 +10721,7 @@ html, body {
   height: 100%;
 }
 
-.search i.icon {
+.search i.icon.icon-search {
   position: absolute;
   display: block;
   width: 40px;
@@ -10708,11 +10748,11 @@ html, body {
   outline: none;
 }
 
-.search .search__button {
+.search__button {
   height: 100%;
 }
 
-.search .search__button button {
+.search__button button {
   width: 100%;
   height: 100%;
   min-width: 80px;
@@ -10726,8 +10766,60 @@ html, body {
   background-color: #689CD3;
 }
 
-.search .search__button button:hover {
+.search__button button:hover {
   background-color: #3077C2;
+}
+
+.global-search__clear-all {
+  color: #B0B9C7;
+}
+
+.global-search .context-menu {
+  box-shadow: 0px 9px 11px -4px rgba(152, 151, 175, 0.3);
+  border-top: 1px solid #F1F1F1;
+  top: 40px;
+  height: auto;
+  width: 426px;
+}
+
+.global-search .context-menu:after {
+  display: none;
+}
+
+.global-search .context-menu__header {
+  height: 40px;
+  padding: 8px 10px 8px 20px;
+  border-bottom: none;
+}
+
+.global-search .context-menu__item {
+  height: 48px;
+}
+
+.global-search .context-menu__item > div {
+  height: auto;
+}
+
+.global-search .context-menu__item .icon-multiply {
+  display: none;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.global-search .context-menu__item:hover .icon-multiply {
+  display: block;
+}
+
+.global-search:hover input {
+  border-bottom-left-radius: 0;
+}
+
+.global-search:hover .search__button button {
+  border-bottom-right-radius: 0;
+}
+
+.global-search:hover .context-menu {
+  display: initial;
 }
 
 .top-navigation__toolbar {
@@ -11652,15 +11744,15 @@ label.menu-toggle {
   overflow-y: scroll;
 }
 
-.grid table tr:nth-child(2n + 3) {
+.grid table tbody tr:nth-child(2n + 1) {
   background-color: #F9F9FB;
 }
 
-.grid table tr:nth-child(2n) {
+.grid table tbody tr:nth-child(2n) {
   background-color: #FFF;
 }
 
-.grid table tr:nth-child(n + 2):not(:last-child) {
+.grid table tbody tr:not(:last-child) {
   border-bottom: 1px solid #E2E5EE;
 }
 

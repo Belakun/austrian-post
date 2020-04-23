@@ -100,21 +100,22 @@
     & tbody {
       overflow-y: scroll;
 
+      & tr {
+        &:nth-child(2n + 1) {
+          background-color: $main-white-gray;
+        }
+
+        &:nth-child(2n) {
+          background-color: $main-white;
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $main-lightest-grey;
+        }
+      }
     }
 
     & tr {
-      &:nth-child(2n + 3) {
-        background-color: $main-white-gray;
-      }
-
-      &:nth-child(2n) {
-        background-color: $main-white;
-      }
-
-      &:nth-child(n + 2):not(:last-child) {
-        border-bottom: 1px solid $main-lightest-grey;
-      }
-
       & td {
         text-align: center;
       }
