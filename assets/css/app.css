@@ -11539,6 +11539,7 @@ label.menu-toggle {
 
 .workzone > .col > .row:first-child {
   height: 100%;
+  overflow: scroll;
 }
 
 .grid > .col {
